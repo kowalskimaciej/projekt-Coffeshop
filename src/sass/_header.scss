@@ -1,7 +1,8 @@
 .header {
   height: 550px;
   background-image: url(../images/background.png);
-  padding: 20px;
+  background-size: cover;
+  padding: 22px;
 }
 
 .container {
@@ -12,23 +13,24 @@
   color: $color-light;
   line-height: 6px;
 
+
   h2 {
-    font-size: 20px;
+    font-size: 25px;
     text-transform: uppercase;
-    letter-spacing: 8px;
     font-weight: $font-bold;
+    letter-spacing: 8px;
   }
 
   h3 {
-    font-size: 9px;
+    font-size: 12px;
     text-transform: uppercase;
-    font-weight: $font-semibold;
     letter-spacing: 4px;
+    font-weight: $font-semibold;
   }
 }
 
 .main-nav {
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
 
   a {
@@ -36,18 +38,22 @@
     color: rgb(197, 188, 176);
     text-decoration: none;
   }
-}
 
+  a:hover {
+    font-weight: bold;
+  }
+}
+  
 .welcome-text {
   color: $color-middle;
   line-height: 25px;
   position: absolute;
   top: 25%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
 
   h1 {
-    font-size: 60px;
+    font-size: 65px;
     font-weight: $font-bold;
     text-transform: uppercase;
     letter-spacing: 10px;
@@ -64,7 +70,7 @@
 
 .welcome-text :after {
   position: absolute;
-  content: "";
+  content: '';
   bottom: -10px;
   left: 50%;
   width: 180px;
@@ -75,21 +81,72 @@
 
 .discover {
   color: $color-light;
+  line-height: 1;
   text-align: center;
   position: absolute;
-  line-height: 1;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
+
 
   h2 {
+    font-size: 25px;
     font-weight: $font-normal;
-    font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 4px;
   }
 
   i {
     font-size: 26px;
+  }
+}
+
+// Media query
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .header {
+    height: 430px;
+  }
+
+  .welcome-text {
+    top: 23%;
+  
+    h1 {
+      font-size: 40px;
+      letter-spacing: 5px;
+      margin-left: -120px;
+    }
+  }
+
+  .discover {
+    top: 43%;
+  }
+}
+@media (max-width: 575px) {
+  .header {
+    height: 400px;
+  }
+
+  .welcome-text {
+    top: 23%;
+    
+    h1 {
+      font-size: 30px;
+      letter-spacing: 3px;
+      margin-left: -120px;
+    }
+  }
+
+  .discover {
+    top: 38%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .welcome-text {
+    h1 {
+      font-size: 60px;
+      letter-spacing: 7px;
+      margin-left: -100px;
+    }
   }
 }
