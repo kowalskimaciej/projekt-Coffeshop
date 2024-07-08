@@ -45,6 +45,11 @@ body {
   background: $color-middle;
 }
 
+.discover a {
+  text-decoration: none;
+  color: $color-light;
+}
+
 .footer {
   font-size: 11px;
   text-align: center;

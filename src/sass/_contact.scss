@@ -29,3 +29,11 @@ form {
     border: none;
   }
 }
+
+.send a{
+  text-decoration: none;
+  color: $color-dark;
+  font-weight: $font-bold;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
